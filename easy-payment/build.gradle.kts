@@ -43,7 +43,7 @@ publishing {
           create<MavenPublication>("maven") {
             groupId = "com.github.Toqeer12" // Set your group ID
             artifactId = "easy-pamyent" // Set your artifact ID
-            version = "1.1.2" // Set your version
+            version = "1.1.3" // Set your version
             pom {
                 description.set("DESCRIPTION")
             }
@@ -59,7 +59,6 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation (libs.libphonenumber)
 
     implementation(libs.material)
     testImplementation(libs.junit)
