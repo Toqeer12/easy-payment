@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">iPay</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="cross_icon">Cross Icon</string>
+    <string name="select_payment_type">Select Payment Type</string>
+    <string name="jazzcash">JazzCash</string>
+    <string name="wallet_information">Wallet Information</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="submit">Submit</string>
+</resources>

@@ -1,6 +1,8 @@
 package com.hexabyteds.paymentsd
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -8,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.hexabyteds.easy_payment.HelloWorld
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,7 +21,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val textView = findViewById<TextView>( R.id.LabelText)
+        textView.setOnClickListener {
 
-        HelloWorld.printLog("EasyPaisa", "Helllow From EasyWorld");
+            HelloWorld.printLog("EasyPaisa", "Hello From EasyWorld");
+            HelloWorld.showDialog(this)
+        }
+
+
     }
 }
