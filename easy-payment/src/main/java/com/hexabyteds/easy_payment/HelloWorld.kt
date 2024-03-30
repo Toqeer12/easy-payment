@@ -5,16 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
-import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.textfield.TextInputEditText
 import com.google.i18n.phonenumbers.NumberParseException
 import com.google.i18n.phonenumbers.PhoneNumberUtil
 
 object HelloWorld {
-    @JvmStatic
-    fun main(args: Array<String>) {
-    }
 
     fun printLog(tag: String?, message: String?) {
         Log.d(
@@ -72,11 +68,11 @@ object HelloWorld {
             }
 
             Log.d(
-                "email", mobileNumber!!
+                "email", mobileNumber
             )
 
             Log.d(
-                "email", emailAdress!!
+                "email", emailAdress
             )
             bottomSheetDialog.dismiss() // Dismiss the bottom sheet
         }

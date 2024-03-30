@@ -1,21 +1,9 @@
-buildscript {
-     repositories {
-        google()
-        mavenCentral()
-        mavenLocal() // Add mavenLocal() repository here
-    }
-
-    dependencies {
-        classpath("com.android.tools.build:gradle:7.1.3")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
-    }
-}
+//
 
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("maven-publish") // Add the maven-publish plugin here
-    // << --- ADD This
 
 }
 
@@ -37,8 +25,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            consumerProguardFiles("consumer-rules.pro")       // << --- ADD This
-
+            consumerProguardFiles("consumer-rules.pro")
+            consumerProguardFiles( "consumer-rules.pro")
         }
     }
     compileOptions {
@@ -55,7 +43,7 @@ publishing {
           create<MavenPublication>("maven") {
             groupId = "com.github.Toqeer12" // Set your group ID
             artifactId = "easy-pamyent" // Set your artifact ID
-            version = "1.0.0" // Set your version
+            version = "1.1.2" // Set your version
             pom {
                 description.set("DESCRIPTION")
             }
